@@ -1,24 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import Die from "./components/Die";
+import "./main.css";
+import data from "./data";
 
 function App() {
+  const values = data.map((value) => {
+    return <Die key={value.id} {...value} />;
+  });
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+      <div className="die">{values}</div>
+    </main>
   );
 }
 
