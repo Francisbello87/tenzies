@@ -15,31 +15,63 @@ body {
 
 main {
   background: #fff;
-  width: 20rem;
-  height: 20rem;
+  height: 25rem;
+  max-width: 50rem;
+  padding: 1.25rem;
   border-radius: 0.625rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
-.value {
-  width: 2.25rem;
-  height: 2.25rem;
-  cursor: pointer;
-  font-size: 1.3125rem;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: "Karla", sans-serif;
-  box-shadow: 0px 0.125rem 0.125rem rgba(0, 0, 0, 0.15);
-  border-radius: 0.2381rem;
-  background: #fff;
+.title {
+  font-size: 2.5rem;
+  margin: 0;
 }
-.die {
+
+.instructions {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+.dice-container {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 17.92px;
-  place-content: center;
-  /* box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15); */
+  grid-template: auto auto / repeat(5, 1fr);
+  gap: 1.25rem;
+}
+.face {
+  height: 3.125rem;
+  width: 3.125rem;
+  box-shadow: 0rem 0.125rem 0.125rem rgba(0, 0, 0, 0.15);
+  border-radius: 0.625rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.num {
+  font-size: 2rem;
+}
+
+button {
+  background: #5035ff;
+  color: #fff;
+  font-family: "Karla", sans-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 2.5rem;
+  padding: 0.625rem 1.5625rem;
+  border: none;
+  border-radius: 0.625rem;
+  outline: none;
+  cursor: pointer;
+}
+button:focus {
+  outline: none;
+}
+
+button:active {
+  box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
 }
